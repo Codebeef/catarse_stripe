@@ -1,0 +1,8 @@
+= CatarseBraintree
+
+Install the database migrations
+
+    bundle exec rake catarse_stripe:install:migrations
+    bundle exec rake db:migrate
+
+This project rocks and uses MIT-LICENSE.

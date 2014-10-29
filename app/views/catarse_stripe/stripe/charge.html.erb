@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stripe Payment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet">
+    <style>
+    body{background-color: #e5e5e5;}
+    div.container { position: relative;}
+    div.row { position: absolute; margin:30px 50px 50px 50px;}
+    div.stripe-field {
+        position:absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        }
+    </style>
+  </head>
+  <body>
+	   <div class="container">
+		    <div class="row">
+		      <div class="span4">
+		        <div class="stripe-field">
+  		        <h2><%= t('.title') %></h2>
+  		        <p><%= t('.description').html_safe %></p>
+  				    <%= form_tag pay_stripe_path(params[:id]) do %>
+  						  <script src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button" data-key="<%= @backer.project.stripe_key %>" data-label="Contribute With Stripe"></script>
+  						<% end %>
+            </div>
+				    <script src="http://code.jquery.com/jquery.js"></script>
+				    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
+			    </div>
+		    </div>
+	   </div>
+  </body>
+</html>

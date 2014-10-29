@@ -1,0 +1,25 @@
+cy:
+  projects:
+    new:
+      please_connect_with_stripe: 'Plis cysylltwch gyda Stripe cyn i chi ychwanegu prosiect newydd.'
+    backers:
+      review:
+        stripe: 'Stripe'
+        international:
+          section_title: 'Cewch eich ailgyfeirio at y wefan prosesu taliadau er mwyn cwblhau’r taliad.'
+          user_document_label: 'CPF / CNPJ (only for Brazilians)'
+          button: 'Ailgyfeirio at Daliad Gyda Stripe'
+      checkout:
+        stripe_cancel: 'Canslwyd eich taliad Stripe. Plis triwch eto.'
+        stripe_description: 'Cefnogi’r p[rosiect %{project_name} gyda %{value} (GBP)'
+        stripe_error: 'Wps. Roedd yna wall wrth anfon eich taliad at Stripe. Plis triwch eto.'
+        success: 'Roedd eich rhodd yn llwyddianus. Diolch yn fawr!'
+  users:
+    auth:
+      stripe_error: 'Wps. Roedd yna wall tra’n awdurdodi eich defnyddiwr i Stripe. Plis triwch eto.'
+      success: 'Cysylltwyd eich cyfrif Stripe. Rydych chi’n barod i dderbyn taliadau!'
+  catarse_stripe:
+    stripe:
+      charge:
+        title: Taliadau Cyllido Torfol gyda Stripe
+        description: Rydych chi wedi dewis rhoi eich rhodd gyda cherdyn credyd. Mae taliadau Stripe ar gyfer cwsmeriaid yn yn gadael i chi ddefnyddio Visa, Mastercard neu Amex. Nid yw manylion Cerdyn Credyd yn cael eu cadw ar y wefan cyllido torfol ond yn saff ar weinyddion Stripe. Am ragor o fanylion ewch i <a href="http://stripe.com"><b>STRIPE</b></a>

@@ -1,0 +1,9 @@
+= javascript_include_tag 'catarse_stripe'
+
+h3= t('projects.backers.review.international.section_title')
+
+#catarse_stripe_form
+  = form_tag charge_stripe_path(params[:id]) do
+    .clearfix
+    .bootstrap-twitter
+      = submit_tag t('projects.backers.review.international.button'), :class => 'btn btn-primary btn-large'

@@ -1,0 +1,25 @@
+en:
+  projects:
+    new:
+      please_connect_with_stripe: 'Please connect with stripe before you add a new project.'
+    backers:
+      review:
+        stripe: 'Stripe'
+        international:
+          section_title: 'You will be directed to the payment processor site to complete payment.'
+          user_document_label: 'CPF / CNPJ (only for Brazilians)'
+          button: 'Redirect to Payment By Stripe'
+      checkout:
+        stripe_cancel: "Your Stripe payment was canceled. Please try again."
+        stripe_description: "Back project %{project_name} with %{value} (USD)"
+        stripe_error: "Ooops. There was an error while sending your payment to Stripe. Please try again."
+        success: "Your back was successfully made. Thanks a lot!"
+  users:
+    auth:
+      stripe_error: "Ooops. There was an error while authorizing your user to Stripe. Please try again."
+      success: "Your Stripe acct is connected. Your are ready to accept payments!"
+  catarse_stripe:
+    stripe:
+      charge:
+        title: Crowdfunding Payments with Stripe
+        description: You've chosen to contribute using a credit card. Stripe payments for customers in US and Canada allow you to use your Visa, Mastercard or Amex. Credit Card information is not stored on the crowdfunding website, and is safely stored on Stripe's servers. For more info visit <a href="http://stripe.com"><b>STRIPE PAYMENTS</b></a>
