@@ -28,7 +28,7 @@
             <% if current_user.stripe_access_token %>
               <h4><%= t('.connected.title') %></h4>
               <p><%= t('.connected.description') %></p>
-              <p><%= t('.connected.stripe_id', strip_id: current_user.stripe_userid) %></p>
+              <p><%= t('.connected.stripe_id', stripe_id: current_user.stripe_userid) %></p>
               <p><%= link_to t('.connected.create_first_project'), main_app.new_project_path, :class => "btn btn-success" %></p>
             <% else %>
               <p><%= t('.not_connected.instructions') %></p>
