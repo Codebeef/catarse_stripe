@@ -20,6 +20,15 @@ en:
       success: "Your Stripe acct is connected. Your are ready to accept payments!"
   catarse_stripe:
     stripe:
+      auth:
+        connected:
+          title: STRIPE CONNECTED!
+          description: You are ready to receive payments for your projects!
+          stripe_id: "Your Stripe user ID: %{stripe_id}"
+          create_first_project: 'Create my first project'
+        not_connected:
+          instructions: "In order to use Stripe payments as your payment processor, you'll need to connect and create a Stripe account. You can do that easily through this Crowdfunding platform."
+          prompt: "If you don't have a Stripe account, you'll be prompted to create one"
       charge:
         title: Crowdfunding Payments with Stripe
         description: You've chosen to contribute using a credit card. Stripe payments for customers in US and Canada allow you to use your Visa, Mastercard or Amex. Credit Card information is not stored on the crowdfunding website, and is safely stored on Stripe's servers. For more info visit <a href="http://stripe.com"><b>STRIPE PAYMENTS</b></a>

@@ -26,24 +26,24 @@
           <div class="stripe-field">
             <h2>Stripe Connect</h2>
             <% if current_user.stripe_access_token %>
-              <h4>STRIPE CONNECTED!</h4>
-              <p> You are ready to receive payments for your projects!</p>
-              <p>Your Stripe user ID: <%= current_user.stripe_userid %></p>
+              <h4><%= t('.connected.title') %></h4>
+              <p><%= t('.connected.description') %></p>
+              <p><%= t('.conected.stripe_id', strip_id: current_user.stripe_userid) %></p>
+              <p><%= link_to t('.connected.create_first_project'), main_app.new_project_path, :class => "btn btn-success" %></p>
             <% else %>
-              <p> In order to use Stripe payments as your payment processor, you'll need to connect and create a Stripe account. You can do that easily through this Crowdfunding platform.</p>
-              <p> If you don't have a Stripe account, you'll be prompted to create one</p>
+              <p><%= t('.not_connected.instructions') %></p>
+              <p><%= t('.not_connected.prompt') %></p>
               <p class="stripe-connect-btn">
-              <a href="<%= oauth_client.auth_code.authorize_url(:scope => 'read_write', :stripe_landing => 'register') %>">
-                <img src="/assets/catarse_stripe/auth/stripe_blue.png">
-              </a>
+                  <a href="<%= @client.auth_code.authorize_url(:scope => 'read_write', :stripe_landing => 'register') %>">
+                      <img src="/assets/catarse_stripe/auth/stripe_blue.png">
+                  </a>
               </p>
             <% end %>
-            <p><%= link_to "Back To User", main_app.user_path(@stripe_user), :class => "btn btn-primary" %></p>
-            </stripe-field>
-            <script src="http://code.jquery.com/jquery.js"></script>
-            <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
           </div>
         </div>
       </div>
-    </body>
-  </html>
+    </div>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
