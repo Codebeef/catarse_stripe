@@ -34,9 +34,9 @@
               <p><%= t('.not_connected.instructions') %></p>
               <p><%= t('.not_connected.prompt') %></p>
               <p class="stripe-connect-btn">
-                  <a href="<%= @client.auth_code.authorize_url(:scope => 'read_write', :stripe_landing => 'register') %>">
-                      <img src="/assets/catarse_stripe/auth/stripe_blue.png">
-                  </a>
+                <a href="<%= oauth_client.auth_code.authorize_url(:scope => 'read_write', :stripe_landing => 'register') %>">
+                  <img src="/assets/catarse_stripe/auth/stripe_blue.png">
+                </a>
               </p>
             <% end %>
           </div>
