@@ -5,7 +5,7 @@ module CatarseStripe
     config.before_initialize do
       puts 'Adding Stripe observers'
       config.active_record.observers << 'CatarseStripe::ProjectObserver'
-      config.active_record.observers << 'CatarseStripe::ContributorObserver'
+      config.active_record.observers << 'CatarseStripe::ContributionObserver'
     end
   end
 end

@@ -1,6 +1,6 @@
 module CatarseStripe
   module Service
-    module Contributor
+    module Contribution
 
       class Base < CatarseStripe::Service::Base
         attr_reader :project
@@ -13,14 +13,14 @@ module CatarseStripe
           @project = project
         end
 
-        def contributors
-          @project.contributors.where(state: 'confirmed')
+        def contributions
+          @project.contributions.where(state: 'confirmed')
         end
 
-        def each_contributor(&block)
-          contributors.find_in_batches do |batch|
-            batch.each do |contributor|
-              yield contributor
+        def each_contribution(&block)
+          contributions.find_in_batches do |batch|
+            batch.each do |contribution|
+              yield contribution
             end
           end
         end

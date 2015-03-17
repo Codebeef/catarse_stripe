@@ -1,17 +1,17 @@
 module CatarseStripe
   module Service
-    module Contributor
+    module Contribution
 
       class Refund
-        attr_reader :contributor
+        attr_reader :contribution
 
-        def initialize(contributor)
-          @contributor = contributor
+        def initialize(contribution)
+          @contribution = contribution
         end
 
         def refund_transaction
           CatarseStripe::Request::Refund.new({
-            id: contributor.id
+            id: contribution.id
           })
         end
 

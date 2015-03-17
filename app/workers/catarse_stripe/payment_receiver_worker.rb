@@ -5,7 +5,7 @@ module CatarseStripe
 
     def perform(project_id)
       project = Project.find(project_id)
-      CatarseStripe::Service::Contributor::Pay.perform(project)
+      CatarseStripe::Service::Contribution::Pay.perform(project)
     end
   end
 end

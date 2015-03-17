@@ -8,8 +8,8 @@ describe CatarseBraintree::BraintreeController, type: :controller do
   before(:each) do
     # Setting up routing stubs
     controller.stub(:main_app).and_return(main_app)
-    main_app.stub(:project_contributor_path).with(project, contribution).and_return('contributor path')
-    main_app.stub(:new_project_contributor_path).with(project).and_return('new contributor path')
+    main_app.stub(:project_contribution_path).with(project, contribution).and_return('contribution path')
+    main_app.stub(:new_project_contribution_path).with(project).and_return('new contribution path')
 
     PaymentEngines.stub(:find_payment).and_return(contribution)
     PaymentEngines.stub(:create_payment_notification)
@@ -65,7 +65,7 @@ describe CatarseBraintree::BraintreeController, type: :controller do
 
       it 'should redirect to the project page' do
         send_action
-        response.should redirect_to 'contributor path'
+        response.should redirect_to 'contribution path'
       end
     end
 
@@ -81,7 +81,7 @@ describe CatarseBraintree::BraintreeController, type: :controller do
 
       it 'should redirect to the new contribution page' do
         send_action
-        response.should redirect_to 'new contributor path'
+        response.should redirect_to 'new contribution path'
       end
     end
   end
