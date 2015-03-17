@@ -1,4 +1,4 @@
-class AddStripeFieldsToBackers < ActiveRecord::Migration
+class AddStripeFieldsTocontributors < ActiveRecord::Migration
   def change
     add_column :users, :stripe_key, :string
     add_column :users, :stripe_userid, :string

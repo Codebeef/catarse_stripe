@@ -2,7 +2,7 @@ en:
   projects:
     new:
       please_connect_with_stripe: 'Please connect with stripe before you add a new project.'
-    backers:
+    contributors:
       review:
         stripe: 'Stripe'
         international:

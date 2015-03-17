@@ -7,9 +7,9 @@ require "catarse_stripe/request/refund"
 require "catarse_stripe/request/settle"
 
 require "catarse_stripe/service/base"
-require "catarse_stripe/service/backer/base"
-require "catarse_stripe/service/backer/refund"
-require "catarse_stripe/service/backer/pay"
+require "catarse_stripe/service/contributor/base"
+require "catarse_stripe/service/contributor/refund"
+require "catarse_stripe/service/contributor/pay"
 
 module CatarseStripe
 end

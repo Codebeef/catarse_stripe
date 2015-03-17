@@ -1,6 +1,6 @@
 module CatarseStripe
   class StripeController < ::ApplicationController
-    SCOPE = "projects.backers.checkout"
+    SCOPE = "projects.contributors.checkout"
     layout :false
 
     helper_method :oauth_client
@@ -41,7 +41,7 @@ module CatarseStripe
     end
 
     def charge
-      @backer = contribution
+      @contributor = contribution
 
       respond_to do |format|
         format.html
@@ -68,17 +68,17 @@ module CatarseStripe
         contribution.confirm!
 
         flash[:success] = I18n.t('success', scope: SCOPE)
-        redirect_to main_app.project_backer_path(contribution.project, contribution)
+        redirect_to main_app.project_contributor_path(contribution.project, contribution)
       rescue => e
         flash[:failure] = I18n.t('stripe_error', scope: SCOPE)
         ::Rollbar.error(e) rescue nil
-        redirect_to main_app.new_project_backer_path(contribution.project)
+        redirect_to main_app.new_project_contributor_path(contribution.project)
       end
     end
 
     def cancel
       flash[:failure] = I18n.t('stripe_cancel', scope: SCOPE)
-      redirect_to main_app.new_project_backer_path(contribution.project)
+      redirect_to main_app.new_project_contributor_path(contribution.project)
     end
 
     protected

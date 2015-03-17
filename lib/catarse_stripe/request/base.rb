@@ -2,7 +2,7 @@ module CatarseStripe
   module Request
 
     class Base
-      SCOPE = 'projects.backers.checkout'
+      SCOPE = 'projects.contributors.checkout'
 
       attr_reader :options
 

@@ -2,7 +2,7 @@ cy:
   projects:
     new:
       please_connect_with_stripe: 'Plis cysylltwch gyda Stripe cyn i chi ychwanegu prosiect newydd.'
-    backers:
+    contributors:
       review:
         stripe: 'Stripe'
         international:

@@ -1,6 +1,6 @@
 begin
-  route_proc = ->(backer) do
-    CatarseStripe::Engine.routes.url_helpers.review_stripe_path(backer)
+  route_proc = ->(contributor) do
+    CatarseStripe::Engine.routes.url_helpers.review_stripe_path(contributor)
   end
 
   PaymentEngines.register({

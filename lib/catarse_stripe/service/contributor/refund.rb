@@ -1,17 +1,17 @@
 module CatarseStripe
   module Service
-    module Backer
+    module Contributor
 
       class Refund
-        attr_reader :backer
+        attr_reader :contributor
 
-        def initialize(backer)
-          @backer = backer
+        def initialize(contributor)
+          @contributor = contributor
         end
 
         def refund_transaction
           CatarseStripe::Request::Refund.new({
-            id: backer.id
+            id: contributor.id
           })
         end
 
