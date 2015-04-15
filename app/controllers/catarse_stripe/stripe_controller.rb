@@ -63,7 +63,6 @@ module CatarseStripe
         contribution.update_attributes({
           payment_token: customer.id,
           payment_method: 'Stripe',
-          confirmed_at: Time.now.utc
         })
         contribution.confirm!
 
