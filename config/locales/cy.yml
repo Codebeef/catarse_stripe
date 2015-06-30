@@ -20,6 +20,15 @@ cy:
       success: 'Cysylltwyd eich cyfrif Stripe. Rydych chi’n barod i dderbyn taliadau!'
   catarse_stripe:
     stripe:
+      auth:
+        connected:
+          title: "STRIPE WEDI'I GYSYLLTU!"
+          description: Rydych chi'n barod i dderbyn taliadau ar gyfer eich prosiectau.
+          stripe_id: "Eich ID defnyddiwr Stripe: %{stripe_id}"
+          create_first_project: 'Creu fy mhrosiect'
+        not_connected:
+          instructions: "Er mwyn defnyddio Stripe ar gyfer prosesu taliadau, bydd rhaid i chi greu cyfrif Stripe. Gallwch wneud hynny'n hawdd trwy'r wefan hon."
+          prompt: "Os nad oes gennych gyfrif Stripe yna cewch eich arwain i greu un."
       charge:
         title: Taliadau Cyllido Torfol gyda Stripe
         description: Rydych chi wedi dewis rhoi eich rhodd gyda cherdyn credyd. Mae taliadau Stripe ar gyfer cwsmeriaid yn yn gadael i chi ddefnyddio Visa, Mastercard neu Amex. Nid yw manylion Cerdyn Credyd yn cael eu cadw ar y wefan cyllido torfol ond yn saff ar weinyddion Stripe. Am ragor o fanylion ewch i <a href="http://stripe.com"><b>STRIPE</b></a>
