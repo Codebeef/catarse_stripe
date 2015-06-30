@@ -9,6 +9,7 @@ CatarseStripe::Engine.routes.draw do
     collection do
       get :auth
       post :callback
+      get :callback
     end
   end
 end
